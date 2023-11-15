@@ -21,13 +21,15 @@ Nota::Nota() {
 
 Nota::Nota(const Nota& orig) {
     pnota = nullptr;
-    this->pnota = orig.pnota;
+    
+    CursoAlumno *aux = orig.pnota;
+    (*pnota) = (*aux);
 }
 
 void Nota::operator=(const Nota& orig){
-    this->pnota = orig.pnota;
+    *(this->pnota) = *(orig.pnota);
 //    this->pnota = new Primera;
-//    *(this->pnota)=        orig.pnota;
+//    *(this->pnota) = orig.pnota;
 }
 
 Nota::~Nota() {
@@ -45,8 +47,8 @@ void Nota::imprimirNota(ofstream &arch){
     pnota->imprime(arch);
 }
 
-bool Nota::operator>(const class Nota &other){
-    return *pnota < *other.pnota;
+bool Nota::operator<(const class Nota &other){
+    return *pnota < *(other.pnota);
     
     
 //    char cod1[20],cod2[20];    

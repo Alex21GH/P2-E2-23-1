@@ -100,13 +100,14 @@ void CursoAlumno::leePrimera(ifstream&arch){
 
 void CursoAlumno::operator =(const class CursoAlumno &orig){
     // De CursoAlumno
-    char codcur[10]; orig.GetCodcur(codcur);
-    this->SetCodcur(codcur);
+    codcur = nullptr;
+    char oricodcur[10]; orig.GetCodcur(oricodcur);
+    this->SetCodcur(oricodcur);
     this->SetCiclo(orig.GetCiclo());
-    this->SetCodigo(orig.GetCiclo());
+    this->SetCodigo(orig.GetCodigo());
     this->SetNota(orig.GetNota());
     this->SetCreditos(orig.GetCreditos());
-    this->SetVez(orig.GetVez());    
+    this->SetVez(orig.GetVez());   
 }
 
 void CursoAlumno::imprime(ofstream&arch){

@@ -28,7 +28,7 @@ public:
     void operator=(const Nota& orig);
     void leerPrimera(ifstream &);
     void imprimirNota(ofstream &);
-    bool operator>(const class Nota &);
+    bool operator<(const class Nota &);
 };
 
 #endif /* NOTA_H */

@@ -49,6 +49,8 @@ public:
     virtual void imprime(ofstream&);
     void operator =(const class CursoAlumno &orig);
     bool operator<(const class CursoAlumno &other);
+    
+//    virtual copiarDatos();
 };
 
 #endif /* CURSOALUMNO_H */

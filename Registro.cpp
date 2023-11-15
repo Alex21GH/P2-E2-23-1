@@ -23,12 +23,10 @@ void Registro::carga(){
     }
     
     class Nota nota;
-//    Nota tmpnota;
     while(true){
         nota.leerPrimera(arch);
         if(arch.eof()) break;
         vregistro.push_back(nota);
-//        tmpnota = nota;
     }
 }
 
